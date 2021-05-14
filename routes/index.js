@@ -1,16 +1,25 @@
 const express = require("express");
 const router = express.Router();
+const User = require("../models/User");
 
-router.get("/", (request, response) => {
-  response.send("You are in get");
+router.get("/users", (request, response) => {
+  response.send("Returning all users");
 });
 
-router.post("/profiles", (request, response) => {
-  response.send("You are in post");
+router.post("/users", (request, response) => {
+  response.send("Creating new user");
 });
 
-router.post("/friends", (request, response) => {
-  response.send("You are in post");
+router.get("/users/:user_id", (request, response) => {
+  response.send("Returning a single user");
+});
+
+router.patch("/users/:user_id", (request, response) => {
+  response.send("Updating a single user");
+});
+
+router.delete("/users/:user_id", (request, response) => {
+  response.send("Deleting a single user");
 });
 
 module.exports = router;
