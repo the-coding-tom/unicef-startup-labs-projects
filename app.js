@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const User = require("./models/User.js");
 const express = require("express");
+const routes = require("./routes");
 
 mongoose
   .connect("mongodb://localhost/my_ecommerce_db", {
@@ -17,18 +18,8 @@ mongoose
 const app = express();
 const port = 3000;
 
-app.get("/", (request, response)=>{
-  response.send("You are in get")
-})
+app.use(routes);
 
-app.post("/profiles", (request, response)=>{
-  response.send("You are in post")
-})
-
-app.post("/friends", (request, response)=>{
-  response.send("You are in post")
-})
-
-app.listen(port, ()=>{
-  console.log("server started!")
-})
+app.listen(port, () => {
+  console.log("server started!");
+});
