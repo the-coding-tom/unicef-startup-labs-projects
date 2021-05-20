@@ -3,7 +3,11 @@ const router = express.Router();
 const User = require("../models/User");
 
 router.get("/users", (request, response) => {
-  response.send("Returning all users");
+  User.find((error, data) => {
+    if (!error) {
+      response.json(data);
+    }
+  });
 });
 
 router.post("/users", (request, response) => {
