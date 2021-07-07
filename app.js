@@ -3,6 +3,7 @@ const User = require("./models/User.js");
 const express = require("express");
 const user_routes = require("./routes/user_api");
 const product_routes = require("./routes/product_api");
+const ussd_routes = require("./routes/ussd_api");
 const cors = require("cors");
 
 mongoose
@@ -27,7 +28,9 @@ app.use(express.json());
 
 app.use("/api/v1", user_routes);
 app.use("/api/v1", product_routes);
+app.use("/api/v1", ussd_routes);
 
 app.listen(port, () => {
   console.log("server started!");
+  console.log(`server running on http://localhost:${port}`);
 });
