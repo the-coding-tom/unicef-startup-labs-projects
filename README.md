@@ -1,3 +1,3 @@
 # unicef-startup-labs-projects
 
-* Sample code during my lecturing at the UNICEF startup labs program.
+* Code for training session which during my lecturing at the UNICEF startup labs program.
