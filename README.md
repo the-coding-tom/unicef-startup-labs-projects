@@ -1,3 +1,3 @@
 # unicef-startup-labs-projects
 
-* Download Mongo DB
+* Sample code during my lecturing at the UNICEF startup labs program.
